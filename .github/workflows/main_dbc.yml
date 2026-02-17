@@ -57,4 +57,4 @@ jobs:
           app-name: 'dbc'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DE5D133A3BA347A387856EA16F26C128 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0DD1BD8623E6446BB98B0BF9DC1F7C7C }}
