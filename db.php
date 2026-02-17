@@ -1,22 +1,8 @@
 <?php
-$connectionInfo = getenv("SQLAZURECONNSTR_DefaultConnection");
-
-if (!$connectionInfo) {
-    die("No connection string found.");
-}
-
-$parts = [];
-foreach (explode(";", $connectionInfo) as $part) {
-    if (strpos($part, "=") !== false) {
-        list($key, $value) = explode("=", $part, 2);
-        $parts[trim($key)] = trim($value);
-    }
-}
-
-$server = str_replace("tcp:", "", $parts["Server"]);
-$database = $parts["Initial Catalog"];
-$username = $parts["User ID"];
-$password = $parts["Password"];
+$server = getenv("DB_SERVER");
+$database = getenv("DB_NAME");
+$username = getenv("DB_USER");
+$password = getenv("DB_PASS");
 
 try {
     $conn = new PDO("sqlsrv:server=$server;Database=$database", $username, $password);
