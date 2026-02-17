@@ -24,6 +24,5 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 >>>>>>> 3f9b98e39c5e8f5496d0d1275fad54f42f1a1d12
     echo "</tr>";
 }
-
 echo "</table>";
 ?>
