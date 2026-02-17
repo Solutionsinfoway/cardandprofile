@@ -11,6 +11,7 @@ echo "<tr>
         <th>Name</th>
         <th>Email</th>
         <th>Company Name</th>
+        <th>Image</th>
       </tr>";
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -19,6 +20,14 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo "<td>" . $row['FullName'] . "</td>";
     echo "<td>" . $row['Email'] . "</td>";
     echo "<td>" . $row['Company_Name'] . "</td>";
+        echo "<td>";
+    if (!empty($row['Image'])) {
+        echo "<img src='" . htmlspecialchars($row['ImageUrl']) . "' width='100' height='100'>";
+    } else {
+        echo "Image Missing";
+    }
+    echo "</td>";
+
     echo "</tr>";
 }
 
