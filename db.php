@@ -1,5 +1,5 @@
 <?php
-$connectionInfo = getenv("SQLAZURECONNSTR_Defaultconnection");
+$connectionInfo = getenv("SQLAZURECONNSTR_DefaultConnection");
 
 if (!$connectionInfo) {
     die("No connection string found.");
@@ -13,7 +13,7 @@ foreach (explode(";", $connectionInfo) as $part) {
     }
 }
 
-$server = $parts["Server"];
+$server = str_replace("tcp:", "", $parts["Server"]);
 $database = $parts["Initial Catalog"];
 $username = $parts["User ID"];
 $password = $parts["Password"];
