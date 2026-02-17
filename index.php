@@ -13,6 +13,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo "<td>".$row['EmpID']."</td>";
     echo "<td>".$row['FullName']."</td>";
     echo "<td>".$row['Email']."</td>";
+    echo "<td>".$row['Company_Name']."</td>";
     echo "</tr>";
 }
 
