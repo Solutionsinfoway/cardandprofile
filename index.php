@@ -1,4 +1,4 @@
 <?php
 echo "<html><body>";
-echo "Hello";
+echo "Hello World";
 echo "</body></html>";
