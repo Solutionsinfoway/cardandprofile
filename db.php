@@ -1,5 +1,5 @@
 <?php
-$connectionString = getenv("SQLAZURECONNSTR_DefaultConnection");
+$connectionString = getenv("SQLAZURECONNSTR_Defaultconnection");
 
 try {
     $conn = new PDO("sqlsrv:$connectionString");
