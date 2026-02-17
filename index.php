@@ -5,7 +5,7 @@ $sql = "SELECT * FROM Employees";
 $stmt = $conn->query($sql);
 
 echo "<h2>Employee List</h2>";
-echo "<table border='1'>";
+echo "<table border='2'>";
 echo "<tr><th>ID</th><th>Name</th><th>Email</th></tr>";
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
